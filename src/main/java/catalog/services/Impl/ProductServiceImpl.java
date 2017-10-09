@@ -32,11 +32,22 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    /**
+     * Get list of all products
+     *
+     * @return list of products
+     */
     @Override
     public List<Product> getAll() {
         return productRepository.findAll(new Sort(Sort.Direction.ASC, "id"));
     }
 
+    /**
+     * Get product by its id
+     *
+     * @param id product id
+     * @return entity if exist, otherwise null
+     */
     @Override
     public Product getById(Long id) {
         return productRepository.findOne(id);

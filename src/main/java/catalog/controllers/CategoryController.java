@@ -2,7 +2,6 @@ package catalog.controllers;
 
 import catalog.dto.CategoryDTO;
 import catalog.services.CategoryService;
-import org.apache.tomcat.util.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +12,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * REST controller operations for categories
+ */
 @Controller
 public class CategoryController {
 

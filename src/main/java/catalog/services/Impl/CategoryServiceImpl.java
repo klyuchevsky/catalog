@@ -21,11 +21,22 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    /**
+     * Get list of all categories
+     *
+     * @return list of categories
+     */
     @Override
     public List<Category> getAll() {
         return categoryRepository.findAll(new Sort(Sort.Direction.ASC, "id"));
     }
 
+    /**
+     * Get category by id
+     *
+     * @param id category id
+     * @return entity if exist, otherwise null
+     */
     @Override
     public Category getById(Long id) {
         return categoryRepository.findOne(id);

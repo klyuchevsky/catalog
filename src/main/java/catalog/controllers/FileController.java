@@ -24,6 +24,9 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+/**
+ * REST controller for upload and download files
+ */
 @Controller
 public class FileController {
 
